@@ -32,6 +32,7 @@ public class movement : MonoBehaviour {
             anim.SetBool("up", true);
             anim.SetBool("down", false);
             anim.SetBool("left", false);
+            anim.SetBool("right", false);
             transform.Translate((Vector3.forward) * moveSpeed * Time.deltaTime);
 
         }
@@ -40,6 +41,7 @@ public class movement : MonoBehaviour {
             anim.SetBool("up", false);
             anim.SetBool("down", true);
             anim.SetBool("left", false);
+            anim.SetBool("right", false);
             transform.Translate((Vector3.back) * moveSpeed * Time.deltaTime);
 
         }
@@ -54,6 +56,7 @@ public class movement : MonoBehaviour {
             anim.SetBool("up", false);
             anim.SetBool("down", false);
             anim.SetBool("left", true);
+            anim.SetBool("right", false);
             transform.Translate((Vector3.left) * moveSpeed * Time.deltaTime);
 
         }
@@ -64,7 +67,8 @@ public class movement : MonoBehaviour {
 
             anim.SetBool("up", false);
             anim.SetBool("down", false);
-            anim.SetBool("left", true);
+            anim.SetBool("left", false);
+            anim.SetBool("right", true);
             transform.Translate((Vector3.right) * moveSpeed * Time.deltaTime);
 
         }
@@ -87,9 +91,9 @@ public class movement : MonoBehaviour {
             anim.SetBool("walkLeft", false);
 
         if (Input.GetKey(KeyCode.D))
-            anim.SetBool("walkLeft", true);
+            anim.SetBool("walkRight", true);
         else
-            anim.SetBool("walkLeft", false);
+            anim.SetBool("walkRight", false);
 
 
     }
